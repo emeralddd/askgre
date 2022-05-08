@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: #22282c;
+    color: #dee7ef;
+    width: 15%;
+    /* height: 100%; */
+}
+
+.sidebar .item {
+    color: #dee7ef;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.sidebar .active {
+    color: #fff;
+    background-color: #056baf;
+}
+
+.sidebar p .filter {
+    filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(251deg) brightness(106%) contrast(107%);
+    padding-right: 10px;
+}

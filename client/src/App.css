@@ -1,0 +1,20 @@
+html,
+body,
+head {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  overflow-y: auto;
+  font-family: 'Lexend Deca', sans-serif;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

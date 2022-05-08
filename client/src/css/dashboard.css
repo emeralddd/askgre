@@ -1,0 +1,33 @@
+.dashboard {
+    background-color: #f1f1f1;
+    display: flex;
+    height: 100%;
+    flex:1;
+}
+
+.dashboard .content {
+    font-size: xx-large;
+    padding: 10px;
+    width: 85%;
+}
+
+.dashboard .content .card-hidden {
+    display: none;
+}
+
+.dashboard .content .card-visible {
+    display: block;
+}
+
+.dashboard .filter-control {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.dashboard .filter-control .button {
+    background-color: #056baf;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,19 @@
+/* .departmentParent:hover .devisible {
+    display: none;
+}
+
+.departmentParent:hover .deinvisible {
+    display: block;
+} */
+
+.devisible {
+    display: block;
+}
+
+.deinvisible {
+    display: none;
+}
+
+.text-right {
+    text-align: right;
+}

@@ -1,0 +1,35 @@
+.homepage {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right:10px;
+    margin-left: 10px;
+}
+
+.homepage_title {
+    color: #1e2123;
+    text-align: center;
+    font-size: 60px;
+}
+
+.homepage_subtitle {
+    color: #1e212375;
+    text-align: center;
+    font-size: 20px;
+}
+
+.homepage_options {
+    display: flex;
+}
+
+.homepage_button {
+    background-color: #2d3439;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    width: 120px;
+    text-align: center;
+}
