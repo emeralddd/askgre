@@ -1,35 +1,63 @@
 .homepage {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     align-content: center;
-    margin-right:10px;
-    margin-left: 10px;
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
-.homepage_title {
-    color: #1e2123;
-    text-align: center;
+.homepage .text {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage .image-box {
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+}
+
+.homepage .image-box .image {
+    width: 50%;
+    box-shadow: -30px 30px #cecece;
+}
+
+.homepage .text .logo {
+    width: 25%;
+}
+
+.homepage .text .title {
+    color: #000000;
     font-size: 60px;
 }
 
-.homepage_subtitle {
-    color: #1e212375;
-    text-align: center;
+.homepage .text .subtitle {
+    color: #545454;
     font-size: 20px;
 }
 
-.homepage_options {
+.homepage .text .buttons {
     display: flex;
 }
 
-.homepage_button {
-    background-color: #2d3439;
+.homepage .text .buttons .button {
+    background-color: #59A8FF;
     color: #fff;
-    padding: 10px;
-    margin: 10px;
-    width: 120px;
+    border-radius: 10px;
+    border: 0px;
+    width: 200px;
     text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 120px;
+}
+
+.homepage .text .buttons .button:hover {
+    background: #3d9bff;
+    border-radius: 10px;
 }

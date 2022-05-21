@@ -17,3 +17,29 @@
 .text-right {
     text-align: right;
 }
+
+.spinner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: #59A8FF;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background: #3d9bff;
+}
+
+.btn-secondary {
+    background-color: #bdbdbd;
+    border-radius: 10px;
+}
+
+.btn-secondary:hover {
+    background: #828282;
+}

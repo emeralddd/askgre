@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <>
             <div className="footer">
-                Copyright © Askgre 2022
+                COPYRIGHT © ASKGRE 2022
             </div>
         </>
     )

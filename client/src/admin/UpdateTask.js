@@ -2,8 +2,6 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import Spinner from "react-bootstrap/Spinner"
 import Form from "react-bootstrap/Form"
-import Footer from "../components/layout/Footer"
-import NavbarPrivate from "../components/layout/NavbarPrivate"
 import Sidebar from "../components/layout/Sidebar"
 import { apiURL } from "../utils/VariableName"
 import Toast from "react-bootstrap/Toast"
@@ -114,51 +112,50 @@ const UpdateTask = () => {
     } else {
         body = (
             <>
-                <Form onSubmit={onSubmit}>        
-                    <Form.Group className='m-3'>
-                        <h5>Tiêu đề</h5>
+                <Form onSubmit={onSubmit} className='form-box'>        
+                    <div className="group">
+                        <p className="title">Tiêu đề</p>
                         <Form.Control
                             type='text'
                             name='title'
+                            className="field"
                             required
                             value={title}
                             onChange={onChangeDataForm}
                         />
-                    </Form.Group>
-
-                    <div className="m-3">
-                        <h5>Đang diễn ra?</h5>
-                        <Form.Check 
-                            type='checkbox'
-                            id='active'
-                            checked={active}
-                            onChange={onChangeDataForm}
-                        />
                     </div>
+                    
+                    <div className="group">
+                        <p className="title">Đang diễn ra?</p>
 
-                    <Form.Group className='m-3'>
-                        <h5>Nội dung</h5>
+                        <input type="checkbox" id="active" className="check" checked={active} onChange={onChangeDataForm} />
+                        <span className="checkmark"></span>
+                    </div>
+                    
+                    <div className="group">
+                        <p className="title">Nội dung</p>
                         <Form.Control
                             as='textarea'
                             rows={5}
                             name='content'
+                            className="field"
                             required
                             value={content}
                             onChange={onChangeDataForm}
                         />
-                    </Form.Group>
-
-                    <Form.Group className='m-3'>
-                        <h5>Hạn</h5>
+                    </div>
+                    
+                    <div className="group">
+                        <p className="title">Hạn</p>
                         <Form.Control
                             type='text'
                             name='deadline'
+                            className="field"
                             required
                             value={deadline}
                             onChange={onChangeDataForm}
                         />
-                    </Form.Group>
-                
+                    </div>
 
                     <Button variant='primary' type='submit'>
 						Cập nhật
@@ -171,7 +168,6 @@ const UpdateTask = () => {
     return (
         <>  
             <div className="page">
-                <NavbarPrivate />
                 <div className="dashboard">
                     <Sidebar page="task"/>
                     <div className="content">
@@ -203,7 +199,6 @@ const UpdateTask = () => {
                         </Toast>
                     </div>
                 </div>
-                <Footer />
             </div>
         </>
     )

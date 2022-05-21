@@ -15,9 +15,12 @@ const VerifyButtons = ({_id}) => {
     }
 
     return (
-        <div className='text-left'>
+        <div className='buttons'>
             <Button variant='primary' className='p-2 m-1' onClick={update.bind(this, _id)}>
-                <img src={editIcon} alt='edit' />
+                <img src={editIcon} alt='edit' className='svg-white mr-1' />
+                <span>
+                    Xác minh
+                </span>
 			</Button>
         </div>
     )

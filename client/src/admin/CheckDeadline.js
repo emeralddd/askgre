@@ -1,14 +1,12 @@
 import {useContext, useEffect, useState} from 'react'
-import Spinner from 'react-bootstrap/Spinner'
 import Card from 'react-bootstrap/Card'
 import ActionButtons from '../components/items/ActionButtons'
 import {MemberContext} from '../contexts/memberContext'
 import Toast from 'react-bootstrap/Toast'
-import UpdateMemberModal from '../components/form/UpdateMemberModal'
-import NavbarPrivate from '../components/layout/NavbarPrivate'
+import UpdateTaskModal from '../components/form/UpdateTaskModal'
 import Sidebar from '../components/layout/Sidebar'
 import Button from 'react-bootstrap/Button'
-import Footer from '../components/layout/Footer'
+import LoadingSpinner from '../components/items/LoadingSpinner'
 
 const CheckDeadline = () => {
     const {
@@ -29,31 +27,29 @@ const CheckDeadline = () => {
 
     if(membersLoading) {
         body = (
-            <div className="d-flex-justify-content-center mt-2">
-                <Spinner animation='border' variant='info' />
-            </div>
+            <LoadingSpinner />
         )
     } else if(members.length === 0) {
         body = (
             <>
-                <Card className='text-center mx-5 my-5'>
+                <Card className='text-center'>
                     <Card.Header as='h1'>
-                        Khum cóa thành viên lào hớt!
+                        Danh sách trống!
                     </Card.Header>
                 </Card>
             </>
         )
     } else {
         body = (
-            <div className='px-5'>
+            <div className='member'>
                 {members.map(member => (
                     <div className={`card-${typeData==='all'?`visible`:(typeData==='finished'?(member.finished?`visible`:`hidden`):(typeData==='empty'?(member.sentMedia.length===0&&(!member.finished)?`visible`:`hidden`):(member.sentMedia.length!==0&&(!member.finished)?`visible`:`hidden`)))}`}>
-                        <h2>{member.fullName}</h2>
-                        <h4>Ban: {member.department}</h4>
-                        <h4>Hoàn thành: {member.finished?'Rồi':'Chưa'}</h4>
-                        <h4>Ghi chú: {member.note}</h4>
+                        <p className='name'>{member.fullName}</p>
+                        <p className='defino'>Ban: {member.department}</p>
+                        <p className='defino'>Hoàn thành: {member.finished?'Rồi':'Chưa'}</p>
+                        <p className='defino'>Ghi chú: {member.note}</p>
 
-                        <p>Video</p>
+                        <p className='media'>Video</p>
 
                         {member.sentMedia.map(att => (
                             (att.includes('video')
@@ -68,7 +64,7 @@ const CheckDeadline = () => {
                             )
                         ))}
 
-                        <p>Image</p>
+                        <p className='media'>Image</p>
 
                         {member.sentMedia.map(att => (
                             (att.includes('video')
@@ -115,16 +111,15 @@ const CheckDeadline = () => {
 
     return (
         <>
-            <div className='page'>
-                <NavbarPrivate />    
+            <div className='page'>   
                 <div className="dashboard">
                     <Sidebar page="checkdeadline"/>
                     <div className="content">
-                        <UpdateMemberModal />
+                        <UpdateTaskModal />
                         <p>
                             Check Deadline
                         </p>
-                        <Card className='m-3' bg='danger' text='light'>
+                        <Card className='mb-3' bg='danger' text='light'>
                             <Card.Header>
                                 Thông Báo Từ Quản Trị Trang
                             </Card.Header>
@@ -167,7 +162,6 @@ const CheckDeadline = () => {
                         </Toast>
                     </div>
                 </div>         
-                <Footer />
             </div>
         </>
     )

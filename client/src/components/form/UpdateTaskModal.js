@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import { useContext,useEffect,useState } from 'react'
 import {MemberContext } from '../../contexts/memberContext'
 
-const UpdateMemberModal = () => {
+const UpdateTaskModal = () => {
     const {
         memberState:{nowMember},
         updateMember,
@@ -57,10 +57,7 @@ const UpdateMemberModal = () => {
                 <Modal.Body>            
                     <h3>{fullName}</h3>
 
-                    <Form.Group className='m-3'>
-                        <Form.Label>
-                            Ghi chú
-                        </Form.Label>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Control
                             type='text'
                             name='note'
@@ -71,17 +68,19 @@ const UpdateMemberModal = () => {
 					</Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='secondary' onClick={resetNewData}>
-						Cancel
-					</Button>
-					<Button variant='primary' type='submit'>
-						Cập nhật
-					</Button>
+                    <div className=''>
+                        <Button variant='secondary' onClick={resetNewData} className='mx-1'>
+                            Hủy bỏ
+                        </Button>
+                        <Button variant='primary' type='submit' className='mx-1'>
+                            Cập nhật
+                        </Button>
+                    </div>
                 </Modal.Footer>   
             </Form>
         </Modal>
     )
 }
 
-export default UpdateMemberModal
+export default UpdateTaskModal
 

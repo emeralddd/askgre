@@ -1,6 +1,6 @@
 .footer {
-    background-color: #16161a;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
     /* position: fixed; */
     /* bottom: 0px; */
@@ -10,42 +10,28 @@
 
 .navpub {
     display: flex;
-    color: #16161a;
-    background-color: #e6e6e641;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
+    align-items: flex-start;
     width: 100%;
     padding: 10px;
 }
 
-.navpublogo {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.navpublogoimg {
-    max-width: 25%;
-}
-
-.navpubitems {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.navpubitemseach {
+.navpub .item {
     font-size: 20px;
     padding: 10px;
     justify-content: center;
     margin-left:20px;
     margin-top:auto;
     margin-bottom: auto;
-    color:#16161a
-
+    color:#16161a;
+    border-bottom: 1px solid #fff;
 }
 
-.navpubitemseach:hover {
+.navpub .item:hover {
     border-bottom: 1px solid #38383e;
+    transition: 0.4s;
 }
 
 .navpri {

@@ -78,7 +78,7 @@ const UpdateProfileModal = () => {
                 <Modal.Body>            
                     {
                         fields.map(field => (
-                            <Form.Group className='m-3'>
+                            <Form.Group className='mb-3 mx-3'>
                                 <Form.Label>
                                     {field.label}
                                 </Form.Label>
@@ -94,10 +94,10 @@ const UpdateProfileModal = () => {
                     }
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='secondary' onClick={resetNewData}>
-						Cancel
+                    <Button variant='secondary' onClick={resetNewData} className='mx-1'>
+                        Hủy bỏ
 					</Button>
-					<Button variant='primary' type='submit'>
+					<Button variant='primary' type='submit' className='mx-1'>
 						Cập nhật
 					</Button>
                 </Modal.Footer>   

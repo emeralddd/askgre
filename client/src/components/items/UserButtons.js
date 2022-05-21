@@ -22,13 +22,19 @@ const UserButtons = ({_id}) => {
     }
 
     return (
-        <div className='text-left'>
+        <div className='buttons'>
             <Button variant='primary' className='p-2 m-1' onClick={edit.bind(this, _id)}>
-                <img src={editIcon} alt='edit' />
+                <img src={editIcon} alt='edit' className='svg-white mr-1' />
+                <span>
+                    Sửa thông tin
+                </span>
 			</Button>
 
             <Button variant='primary' className='p-2 m-1' onClick={changePassword.bind(this, _id)}>
-                <img src={changePasswordIcon} alt='edit' />
+                <img src={changePasswordIcon} alt='edit' className='svg-white mr-1' />
+                <span>
+                    Đổi mật khẩu
+                </span>
 			</Button>
         </div>
     )

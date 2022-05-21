@@ -15,9 +15,12 @@ const ProfileButtons = ({_id}) => {
     }
 
     return (
-        <div className='text-left'>
+        <div className='buttons'>
             <Button variant='primary' className='p-2 m-1' onClick={update.bind(this, _id)}>
-                <img src={editIcon} alt='edit' />
+                <img src={editIcon} className='svg-white mr-1' alt='edit' />
+                <span>
+                    Sửa thông tin
+                </span>
 			</Button>
         </div>
     )

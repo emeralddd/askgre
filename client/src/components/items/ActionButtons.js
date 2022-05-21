@@ -10,7 +10,7 @@ const ActionButtons = ({_id,note}) => {
         updateMember,
         findMember,
         setShowMemberUpdateModal,
-        showMemberToast
+        setShowMemberToast
     } = useContext(MemberContext)
 
 
@@ -26,7 +26,7 @@ const ActionButtons = ({_id,note}) => {
             note
         })
         
-        showMemberToast({
+        setShowMemberToast({
             show: true,
 		    message: 'Thành công',
 		    type: 'success'
@@ -40,7 +40,7 @@ const ActionButtons = ({_id,note}) => {
             note
         })
 
-        showMemberToast({
+        setShowMemberToast({
             show: true,
 		    message: 'Thành công',
 		    type: 'success'
@@ -48,15 +48,24 @@ const ActionButtons = ({_id,note}) => {
     }
 
     return (
-        <div className='text-left'>
+        <div className='buttons'>
             <Button variant='primary' className='p-2 m-1' onClick={update.bind(this, _id)}>
-                <img src={editIcon} alt='edit' />
+                <img src={editIcon} className='svg-white mr-1' alt='edit' />
+                <span>
+                    Ghi chú
+                </span>
 			</Button>
             <Button variant='primary' className='p-2 m-1' onClick={finish.bind(this,_id)}>
-                <img src={finishIcon} alt='finish' />
+                <img src={finishIcon} className='svg-white mr-1' alt='finish' />
+                <span>
+                    Đã hoàn thành
+                </span>
 			</Button>
             <Button variant='primary' className='p-2 m-1' onClick={definish.bind(this,_id)}>
-                <img src={definishIcon} alt='definish' />
+                <img src={definishIcon} className='svg-white mr-1' alt='definish' />
+                <span>
+                    Chưa hoàn thành
+                </span>
 			</Button>
         </div>
     )

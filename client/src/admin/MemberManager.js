@@ -1,13 +1,11 @@
-import {useContext, useEffect, useState} from 'react'
-import Spinner from 'react-bootstrap/Spinner'
+import {useContext, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
 import ProfileButtons from '../components/items/ProfileButtons'
 import {MemberContext} from '../contexts/memberContext'
 import Toast from 'react-bootstrap/Toast'
 import UpdateProfileModal from '../components/form/UpdateProfileModal'
-import NavbarPrivate from '../components/layout/NavbarPrivate'
 import Sidebar from '../components/layout/Sidebar'
-import Footer from '../components/layout/Footer'
+import LoadingSpinner from '../components/items/LoadingSpinner'
 
 const MemberManager = () => {
     const {
@@ -25,29 +23,27 @@ const MemberManager = () => {
 
     if(membersLoading) {
         body = (
-            <div className="d-flex-justify-content-center mt-2">
-                <Spinner animation='border' variant='info' />
-            </div>
+            <LoadingSpinner />
         )
     } else if(members.length === 0) {
         body = (
             <>
-                <Card className='text-center mx-5 my-5'>
+                <Card className='text-center'>
                     <Card.Header as='h1'>
-                        Khum cóa thành viên lào hớt!
+                        Danh sách trống!
                     </Card.Header>
                 </Card>
             </>
         )
     } else {
         body = (
-            <div className='px-5'>
+            <div className='member'>
                 {members.map(member => (
                     <div>
-                        <h2>{member.fullName}</h2>
-                        <h4>Họ: {member.lastName}</h4>
-                        <h4>Tên: {member.firstName}</h4>
-                        <h4>Ban: {member.department}</h4>
+                        <p className='name'>{member.fullName}</p>
+                        <p className='defino'>Họ: {member.lastName}</p>
+                        <p className='defino'>Tên: {member.firstName}</p>
+                        <p className='defino'>Ban: {member.department}</p>
 
                         <ProfileButtons _id={member._id} />
 
@@ -61,7 +57,6 @@ const MemberManager = () => {
     return (
         <>
             <div className='page'>
-                <NavbarPrivate />    
                 <div className="dashboard">
                     <Sidebar page="members"/>
                     <div className="content">
@@ -69,7 +64,7 @@ const MemberManager = () => {
                         <p>
                             Member Manager
                         </p>
-                        <Card className='m-3' bg='danger' text='light'>
+                        <Card className='mb-3' bg='danger' text='light'>
                             <Card.Header>
                                 Thông Báo Từ Quản Trị Trang
                             </Card.Header>
@@ -102,7 +97,6 @@ const MemberManager = () => {
                         </Toast>
                     </div>
                 </div>         
-                <Footer />
             </div>
         </>
     )

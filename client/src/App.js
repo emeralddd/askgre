@@ -22,6 +22,7 @@ import VerifyQueueManager from './admin/VerifyQueueManager'
 import MemberManager from './admin/MemberManager'
 import UpdateTask from './admin/UpdateTask'
 import UserManager from './admin/UserManager'
+import Settings from './admin/Settings'
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
                 <ProtectedRoute exact path='/membermanager' component={MemberManager} />
                 <ProtectedRoute exact path='/usermanager' component={UserManager} />
                 <ProtectedRoute exact path='/updatetask' component={UpdateTask} />
+                <ProtectedRoute exact path='/settings' component={Settings} />
                 <PublicRoute path='/single/:_id' component={Single} />
               </Switch>
             </Router>

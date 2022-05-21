@@ -64,10 +64,7 @@ const ChangePasswordModal = () => {
                 <Modal.Body>
                     <h3>{nowUser.username}</h3>
 
-                    <Form.Group className='m-3'>
-                        <Form.Label>
-                            Mật khẩu
-                        </Form.Label>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Control
                             type='password'
                             name='newPassword'
@@ -80,7 +77,7 @@ const ChangePasswordModal = () => {
 
                 <Modal.Footer>
                     <Button variant='secondary' onClick={resetNewData}>
-						Cancel
+						Hủy bỏ
 					</Button>
 					<Button variant='primary' type='submit'>
                         Đổi mật khẩu

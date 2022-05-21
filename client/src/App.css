@@ -4,9 +4,15 @@ head {
   height: 100%;
   width: 100%;
   margin: 0px;
-  overflow-y: auto;
+  overflow: auto;
   font-family: 'Lexend Deca', sans-serif;
   background: #ffffff;
+  /* overflow-y: hidden; */
+}
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 a {

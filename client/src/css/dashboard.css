@@ -1,14 +1,143 @@
 .dashboard {
-    background-color: #f1f1f1;
+    background-color: #F6F6F6;
     display: flex;
     height: 100%;
     flex:1;
 }
 
 .dashboard .content {
+    display: flex;
+    flex-direction: column;
     font-size: xx-large;
-    padding: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
     width: 85%;
+}
+
+.dashboard .content .image-box {
+    display: flex;
+    width: 100%;
+    margin-top:1rem;
+}
+
+.dashboard .content .image-box .image {
+    width: 100%;
+    height: 200px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.dashboard .content .data-box {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.dashboard .content .data-box .number {
+    width: 65%;
+    padding-right: 2rem;
+}
+
+.dashboard .content .data-box .number .box {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.dashboard .content .data-box .number .total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dashboard .content .data-box .number .total .box {
+    width: 47%;
+    text-align: left;
+    padding: 15px;
+}
+
+.dashboard .content .data-box .number .total .box .ctnt {
+    font-size: 17px;
+    color: #969696;
+    margin-bottom: 0px;
+}
+
+.dashboard .content .data-box .number .total .box .num {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.dashboard .content .data-box .number .box-flr {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard .content .data-box .number .box-flr .ctnt {
+    font-size: 17px;
+    color: #969696;
+    margin-bottom: 0px;
+    text-align: left;
+    width: 70%;
+}
+
+.dashboard .content .data-box .number .box-flr .num {
+    margin-bottom: 0px;
+}
+
+.dashboard .content .data-box .task {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.dashboard .content .data-box .task p {
+    margin-bottom: 0px;
+}
+
+.dashboard .content .data-box .task .status-active {
+    background-color: #00E332;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.dashboard .content .data-box .task .status-none {
+    background-color: #b0b0b0;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.dashboard .content .data-box .task .what {
+    /* color: #969696; */
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.dashboard .content .data-box .task .ctnt {
+    font-size: 22px;
+    margin-bottom: 0px;
+    white-space: pre-line;
 }
 
 .dashboard .content .card-hidden {
@@ -21,13 +150,62 @@
 
 .dashboard .filter-control {
     text-align: left;
-    margin-left: 20px;
     margin-bottom: 10px;
 }
 
 .dashboard .filter-control .button {
-    background-color: #056baf;
     color: #fff;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.dashboard .content .form-box .group {
+    margin-bottom: 20px;
+}
+
+.dashboard .content .form-box .title {
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.dashboard .content .form-box .field {
+    font-size: 20px;
+    margin-bottom: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.dashboard .content .form-box .check {
+    height: 30px;
+    width: 30px;
+    accent-color: #59A8FF;
+}
+
+.dashboard .content .member .name {
+    font-size: 30px;
+}
+
+.dashboard .content .member .defino {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.dashboard .content .member .media {
+    font-size: 25px;
+    margin-top: 1rem;
+}
+
+.dashboard .content .buttons {
+    text-align: left;
+}
+
+.dashboard .content .buttons .svg-white {
+    filter: invert(95%) sepia(0%) saturate(7489%) hue-rotate(13deg) brightness(105%) contrast(103%);
+}
+
+.mr-1 {
+    margin-right: 0.5rem;
+}
+
+.mr-2 {
+    margin-right: 1rem;
 }

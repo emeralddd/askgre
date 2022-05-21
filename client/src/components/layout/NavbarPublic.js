@@ -15,7 +15,7 @@ const NavbarPublic = () => {
             dashboard = (
                 <>
                     <Link to='/dashboard'>
-                        <p className="navpubitemseach">
+                        <p className="item">
                             Bảng Điều Khiển
                         </p>
                     </Link>
@@ -25,7 +25,7 @@ const NavbarPublic = () => {
             log = (
                 <>
                     <Link to='/logout'>
-                        <p className="navpubitemseach">
+                        <p className="item">
                             Đăng xuất
                         </p>
                     </Link>
@@ -35,7 +35,7 @@ const NavbarPublic = () => {
             log = (
                 <>
                     <Link to='/login'>
-                        <p className="navpubitemseach">
+                        <p className="item">
                             Đăng nhập
                         </p>
                     </Link>
@@ -48,22 +48,16 @@ const NavbarPublic = () => {
     return (
         <>
             <div className="navpub">
-                <div className="navpublogo">
-                    <Link to='/'>
-                        <img src={logo} alt="" className="navpublogoimg" />
-                    </Link>
-                </div>
+                <a href="https://github.com/emeralddd" target='_blank'>
+                    <p className="item">
+                        Github
+                    </p>
+                </a>
 
-                <div className="navpubitems">
-                    <a href="https://github.com/emeralddd" target='_blank'>
-                        <p className="navpubitemseach">
-                            Github
-                        </p>
-                    </a>
-                    {dashboard}
-                    {log}
-                </div>
-            </div>
+                {dashboard}
+
+                {log}
+        </div>
         </>
     )
 }

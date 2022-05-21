@@ -56,7 +56,7 @@ const UpdateVerifyModal = () => {
                     <h4>Họ: {lastName}</h4>
                     <h4>Tên: {firstName}</h4>
 
-                    <Form.Group className='m-3'>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Label>
                             Họ tên
                         </Form.Label>
@@ -69,7 +69,7 @@ const UpdateVerifyModal = () => {
                         />
 					</Form.Group>
 
-                    <Form.Group className='m-3'>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Label>
                             Ban
                         </Form.Label>
@@ -84,7 +84,7 @@ const UpdateVerifyModal = () => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant='secondary' onClick={resetNewData}>
-						Cancel
+                        Hủy bỏ
 					</Button>
 					<Button variant='primary' type='submit'>
 						Cập nhật

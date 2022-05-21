@@ -88,7 +88,7 @@ const UpdateUserModal = () => {
                 <Modal.Body>            
                     <h3>{nowUser.username}</h3>
 
-                    <Form.Group className='m-3'>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Label>
                             Username
                         </Form.Label>
@@ -101,7 +101,7 @@ const UpdateUserModal = () => {
                         />
 					</Form.Group>
 
-                    <Form.Group className='m-3'>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Label>
                             Quyền
                         </Form.Label>
@@ -114,7 +114,7 @@ const UpdateUserModal = () => {
                         />
 					</Form.Group>
 
-                    <Form.Group className='m-3'>
+                    <Form.Group className='mb-3 mx-3'>
                         <Form.Label>
                             Ban
                         </Form.Label>
@@ -170,7 +170,7 @@ const UpdateUserModal = () => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant='secondary' onClick={resetNewData}>
-						Cancel
+						Hủy bỏ
 					</Button>
 					<Button variant='primary' type='submit'>
 						Cập nhật
