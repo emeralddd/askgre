@@ -56,12 +56,13 @@ const Settings = () => {
                     
                     <div className="content">
                         Settings
-
-                        - Max image
-                        - time limit
-                        - 
-
+                        
+                        <div>
+                            In Development
+                        </div>
                     </div>
+
+                    
                 </div>         
             </div>
         </>
